@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100;200;300;400;600;700&display=swap');
+
+:root {
+    font-family: "Noto Sans Display", sans-serif;
+    height: 100%; /*fix for the gradient banding*/
+}
+
+body {
+    margin: 0;
+    background-image: linear-gradient( 125deg, #C2FFD8 10%, #465EFB 100%);
+    background-attachment: fixed;
+}
+
+header {
+    text-align: center;
+    background-color: rgba(255, 255, 255, .6);
+    padding: 0.5em;
+}
+
+footer {
+    text-align: center;
+    background-color: rgba(255, 255, 255, .6);
+    padding: 1em;
+}
+.nav {
+    display: flex;
+    background-color: rgba(255, 255, 255, .4);
+    justify-content: space-around;
+
+    padding: .5em 20%;
+}
+
+.nav-item {
+    width: 7em;
+    text-align: center;
+    align-items:baseline;
+}
+
+.content-card {
+    background-color: rgba(255, 255, 255, .6);
+    border-style: none;
+    border-radius: 10px;
+    min-height: 70vh;
+    min-width: 70vw;
+    margin: 10vh 15vw;
+    display: flex;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    align-items: center;
+}
+
+.left-content {
+    width: 50%;
+    text-align: right;
+    padding: 1em;
+
+}
+
+.right-content {
+    width: 50%;
+    padding: 1em;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 48pt;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 36pt;
+}
+
+a {
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkorange;
+}
+
+@media only screen and (max-width: 800px){
+    .nav {
+        padding: .5em 2em;
+    }
+    .content-card {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .left-content {
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+    .right-content {
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+    #education {
+        flex-direction: column-reverse;
+    }
+    #certifications {
+        flex-direction: column-reverse;
+    }
+}
+
+@media only screen and (prefers-color-scheme:dark){
+    body {
+        background-image: linear-gradient(125deg, #7c98b3 0%, #637081 74%);;
+    }
+}
